@@ -12,3 +12,4 @@ img2 = converter.enhance(15)
 
 #img.show()
 img2.show()
+img2.save("resized_sharp_as_fuck.png")
