@@ -13,7 +13,7 @@ import time
 print("setting options...")
 chrome_options = Options()
 
-chrome_options.add_argument("--headless")
+# chrome_options.add_argument("--headless")
 #chrome_options.add_argument("--disable-gpu")
 
 # make sure to install the driver first and put
@@ -29,6 +29,7 @@ driver.get("http://nonflowers.lingdong.works/")
 
 print("waiting to make sure page has loaded...")
 time.sleep(20)
+driver.save_screenshot("screenshot.png")
 print("executing script...")
 driver.execute_script("makeDownload()")
 print("waiting to make sure file has downloaded...")
