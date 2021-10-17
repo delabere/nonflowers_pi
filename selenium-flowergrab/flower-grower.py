@@ -13,7 +13,7 @@ import time
 print("setting options...")
 chrome_options = Options()
 
-# chrome_options.add_argument("--headless")
+chrome_options.add_argument("--headless")
 #chrome_options.add_argument("--disable-gpu")
 
 # make sure to install the driver first and put
