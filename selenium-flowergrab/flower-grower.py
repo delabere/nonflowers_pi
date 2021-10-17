@@ -4,13 +4,10 @@ selenium fine on the pi
 If we can then we can move onto bigger things
 """
 
-print("importing libraries...")
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
 import os
-
-start = time.time()
 
 # run headless
 print("setting options...")
@@ -47,7 +44,3 @@ title = driver.title
 
 # close
 driver.close()
-
-end = time.time()
-taken = end - start
-print(f"time taken: ", taken, " seconds...")
