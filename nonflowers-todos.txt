@@ -1,0 +1,39 @@
+# run to get selenium and latest webdriver
+pip3 install selenium
+sudo apt-get install chromium-chromedriver  # could be worth trying different browsers
+
+# need to create a quick python script to test selenium headless
+1. grab a page
+2. print something out to screen
+
+
+Things to do:
+SETUP & TESTING
+[x] install raspbian
+[ ] update pi
+[ ] put a nonflowers image on the pi
+[ ] install inky library on pi (& python if needed)
+[ ] test eink display with inky library
+[ ] install software to run wittypi3
+[ ] create python script to wipe screen and load image
+[ ] configure / test wittypi & inky interaction
+  - [ ] run inkypi with wittypi3 plugged inky
+  - [ ] run wittypi3 with inky plugged in
+
+FEASABILITY
+[ ] test script through pi and see if it has the power
+if it has the power:
+  [ ] create selenium script to grab image on desktop to confirm it works
+otherwise:
+  [ ] modify non-flowers to run locally using node & save down image
+  [ ] see if pi has the power to run it locally
+
+
+DEPLOYMENT  
+[ ] create image script (get image, show on screen, shutdown pi)
+[ ] create startup kickoff script (will trigger image script)
+[ ] configure wittypi3 to auto boot once daily
+[ ] figure out how to run this on battery / powerbank
+
+AESTHETICS
+[ ] put the project into a photo frame
