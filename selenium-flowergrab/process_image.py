@@ -6,20 +6,19 @@ def process_image():
     # get the latest png by modified_date and work on that
     latest_date = 0
     latest_filename = ""
-    for file in os.listdir("."):
+    for file in os.listdir("./flower_images"):
         if file.endswith(".png") and file != "edited.png":
-            if os.path.getmtime(file) > latest_date:
-                latest_date = os.path.getmtime(file)
-                latest_filename = file
-
-    print(latest_filename)
+            filepath = os.path.join("flower_images", file)
+            if os.path.getmtime(filepath) > latest_date:
+                latest_date = os.path.getmtime(filepath)
+                latest_file = filepath
 
     # handle the case where there is no png in the directory
-    if latest_filename == "":
+    if latest_file == "":
         print("there is no file in the directory!")
         return
 
-    img = Image.open(latest_filename)
+    img = Image.open(latest_file)
 
 
     #converter = PIL.ImageEnhance.Color(img)
@@ -31,7 +30,7 @@ def process_image():
 
 
     #new_image.show()
-    new_image.save("edited.png")
+    new_image.save("./flower_images/edited.png")
 
 if __name__ == "__main__":
     process_image()

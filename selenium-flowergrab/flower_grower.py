@@ -11,10 +11,11 @@ def get_flower():
 
     print("setting options...")
     chrome_options = Options()
-
+    
     # this sets the download directory for the flower image to be
     # ...wherever we run the script from
-    prefs = {'download.default_directory' : os.getcwd()}
+    flower_folder = os.path.join(os.getcwd(), "flower_images")
+    prefs = {'download.default_directory' : flower_folder}
     chrome_options.add_experimental_option('prefs', prefs)
 
     # set the relevant options as configured
@@ -32,6 +33,10 @@ def get_flower():
     # ...enough of the page does load for it to not matter
     # TODO: can we make this timeout sooner? or finish on loading the element we care about?
     # ...this could save some time (precious on the low power pi)
+    try:
+        driver.get("http://nonflowers.lingdong.works/")
+    except:
+        print("timed out - continuing regardless")
     try:
         driver.execute_script("makeDownload()")
     except:
