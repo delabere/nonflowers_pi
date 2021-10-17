@@ -2,12 +2,12 @@ import os
 
 from PIL import Image, ImageEnhance, ImageFilter
 
-def main():
+def process_image():
     # get the latest png by modified_date and work on that
     latest_date = 0
     latest_filename = ""
     for file in os.listdir("."):
-        if file.endswith(".png"):
+        if file.endswith(".png") and file != "edited.png":
             if os.path.getmtime(file) > latest_date:
                 latest_date = os.path.getmtime(file)
                 latest_filename = file
@@ -24,9 +24,9 @@ def main():
 
     #converter = PIL.ImageEnhance.Color(img)
     converter = ImageEnhance.Sharpness(img)
-    new_image = converter.enhance(8)
+    new_image = converter.enhance(1.2)
     colour_converter = ImageEnhance.Color(new_image)
-    new_image = colour_converter.enhance(1.5)
+    new_image = colour_converter.enhance(1.2)
     new_image = new_image.resize((600, 448))
 
 
@@ -34,4 +34,4 @@ def main():
     new_image.save("edited.png")
 
 if __name__ == "__main__":
-    main()
+    process_image()
