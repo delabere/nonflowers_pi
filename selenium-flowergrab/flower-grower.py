@@ -14,7 +14,8 @@ chrome_options.add_argument("--headless")
 
 # make sure to install the driver first and put
 # it in the same directory
-driver = webdriver.Chrome("./chromedriver", options=chrome_options)
+#driver = webdriver.Chrome("./chromedriver", options=chrome_options)
+driver = webdriver.Chrome(options=chrome_options)
 
 # load a webpage
 driver.get("https://www.python.org")
