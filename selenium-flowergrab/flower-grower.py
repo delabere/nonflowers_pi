@@ -8,13 +8,21 @@ print("importing libraries...")
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
+import os
+
+start = time.time()
 
 # run headless
 print("setting options...")
 chrome_options = Options()
 
-# chrome_options.add_argument("--headless")
-chrome_options.add_argument("--no-sandbox")
+chrome_download_dir = r'C:\Users\jackr\Desktop\projects\nonflowers_pi\selenium-flowergrab\\'
+chrome_download_dir = os.getcwd()
+
+chrome_options.add_argument("--headless")
+prefs = {'download.default_directory' : chrome_download_dir}
+chrome_options.add_experimental_option('prefs', prefs)
+# chrome_options.add_argument("--no-sandbox")
 #chrome_options.add_argument("--disable-gpu")
 
 # make sure to install the driver first and put
@@ -27,18 +35,18 @@ driver = webdriver.Chrome(options=chrome_options)
 print("loading webpage...")
 # driver.get("https://www.python.org")
 driver.get("http://nonflowers.lingdong.works/")
-
 print("waiting to make sure page has loaded...")
-time.sleep(20)
+# time.sleep(20)
 driver.save_screenshot("screenshot.png")
 print("executing script...")
 driver.execute_script("makeDownload()")
 print("waiting to make sure file has downloaded...")
-time.sleep(10)
+time.sleep(5)
 # should be "Welcome to Python.org"
 title = driver.title
 
 # close
 driver.close()
 
-print(title)
+end = time.time()
+print(f"time taken: {end-start} seconds...")
