@@ -49,4 +49,5 @@ title = driver.title
 driver.close()
 
 end = time.time()
-print(f"time taken: ", end-start, " seconds...")
+taken = end - start
+print(f"time taken: ", taken, " seconds...")
