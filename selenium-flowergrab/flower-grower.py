@@ -54,7 +54,6 @@ retries = 0
 while retries < max_retries:
     try:
         driver.execute_script("makeDownload()")
-        break
     except:
         pass
 
