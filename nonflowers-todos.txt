@@ -10,10 +10,12 @@ sudo apt-get install chromium-chromedriver  # could be worth trying different br
 Things to do:
 SETUP & TESTING
 [x] install raspbian
-[ ] update pi
-[ ] put a nonflowers image on the pi
-[ ] install inky library on pi (& python if needed)
-[ ] test eink display with inky library
+[x] update pi
+[x] put a nonflowers image on the pi
+[x] install inky python library on pi (& python if needed)
+[x] install other inky library
+[x] enable SPI
+[x] test eink display with inky library
 [ ] install software to run wittypi3
 [ ] create python script to wipe screen and load image
 [ ] configure / test wittypi & inky interaction
@@ -21,17 +23,21 @@ SETUP & TESTING
   - [ ] run wittypi3 with inky plugged in
 
 FEASABILITY
-[ ] test script through pi and see if it has the power
+[x] test script through pi and see if it has the power
 if it has the power:
-  [ ] create selenium script to grab image on desktop to confirm it works
+  [x] create selenium script to grab image on desktop to confirm it works
 otherwise:
-  [ ] modify non-flowers to run locally using node & save down image
-  [ ] see if pi has the power to run it locally
+  [-] modify non-flowers to run locally using node & save down image
+  [-] see if pi has the power to run it locally
 
 
 DEPLOYMENT  
-[ ] create image script (get image, show on screen, shutdown pi)
+[ ] create image script (get image, edit image, show on screen, shutdown pi)
+  - [x] get image
+  - [x] edit image
+  - [ ] display image
 [ ] create startup kickoff script (will trigger image script)
+[ ] configure script to run on boot - https://learn.sparkfun.com/tutorials/how-to-run-a-raspberry-pi-program-on-startup/all
 [ ] configure wittypi3 to auto boot once daily
 [ ] figure out how to run this on battery / powerbank
 
