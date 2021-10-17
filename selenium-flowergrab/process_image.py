@@ -19,11 +19,11 @@ def main():
         print("there is no file in the directory!")
         return
 
-    latest_filename = Image.open(latest_filename)
+    img = Image.open(latest_filename)
 
 
     #converter = PIL.ImageEnhance.Color(img)
-    converter = ImageEnhance.Sharpness(latest_filename)
+    converter = ImageEnhance.Sharpness(img)
     new_image = converter.enhance(8)
     colour_converter = ImageEnhance.Color(new_image)
     new_image = colour_converter.enhance(1.5)
