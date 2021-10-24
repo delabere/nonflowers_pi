@@ -28,6 +28,7 @@ def display_image():
 
     image = Image.open(image_filepath)
 
+    print("setting image to screen...")
     inky.set_image(image, saturation=saturation)
     inky.show()
 

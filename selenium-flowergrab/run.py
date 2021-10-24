@@ -9,4 +9,5 @@ Most of that is in the get_flower function
 if __name__ == "__main__":
     get_flower()     # get new flower image
     process_image()  # process that into something which looks better on screen
+    # TODO: Clean screen (perhaps not every time)
     display_image()  # put it on the screen
