@@ -4,9 +4,9 @@ options = [
 "--headless",
 # "start-maximized",
 # "enable-automation",
-# "--no-sandbox",
+"--no-sandbox",
 # "--disable-infobars",
-# "--disable-dev-shm-usage",
+"--disable-dev-shm-usage",
 # "--disable-browser-side-navigation",
 # "--disable-gpu",
 ]
