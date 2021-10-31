@@ -34,7 +34,10 @@ def get_flower():
     # TODO: can we make this timeout sooner? or finish on loading the element we care about?
     # ...this could save some time (precious on the low power pi)
     try:
-        driver.get("http://nonflowers.lingdong.works/")
+        # driver.get("http://nonflowers.lingdong.works/")
+        html_path = os.path.join(os.getcwd(), "nonflowers\index.html")
+        html_path = f"file:///{html_path}"
+        driver.get(html_path)
     except:
         print("timed out - continuing regardless")
     try:
