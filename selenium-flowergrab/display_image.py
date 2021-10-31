@@ -10,7 +10,7 @@ def display_image():
     image_filepath = "flower_images/edited.png"
 
     inky = Inky()
-    saturation = 0.5 # need to consider this because my post processing is also increasing sat.
+    saturation = 1 # need to consider this because my post processing is also increasing sat.
 
     # these could be useful later on to make this more dynamic
     # so I will leave them for now
