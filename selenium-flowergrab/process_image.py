@@ -33,7 +33,7 @@ def process_image():
     #new_image.show()
     saturation = 0.8
     palette = hitherdither.palette.Palette(inky._palette_blend(saturation, dtype='uint24'))
-    result = new_image.convert('P', palette=palette, colors=7)
+    new_image = new_image.convert('P', palette=palette, colors=7)
     new_image.save("./flower_images/edited.png")
 if __name__ == "__main__":
     process_image()
