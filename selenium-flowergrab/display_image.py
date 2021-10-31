@@ -11,7 +11,7 @@ def display_image():
     image_filepath = "flower_images/edited.png"
 
     inky = Inky()
-    saturation = 1 # need to consider this because my post processing is also increasing sat.
+    saturation = 0.5 # need to consider this because my post processing is also increasing sat.
     thresholds = [64, 64, 64]  # Threshold for snapping colours, I guess?
 
     palette = hitherdither.palette.Palette(inky._palette_blend(saturation, dtype='uint24'))
