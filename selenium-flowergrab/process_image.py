@@ -1,6 +1,6 @@
 import os
 import hitherdither
-
+import inky
 from PIL import Image, ImageEnhance, ImageFilter
 
 def process_image():
